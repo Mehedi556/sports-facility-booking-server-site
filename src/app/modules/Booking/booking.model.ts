@@ -46,7 +46,11 @@ const bookingSchema = new Schema<TBooking>({
         enum: bookingStatus,
         required: true,
     }
-})
+},
+{
+    timestamps: true
+}
+)
 
 export const Booking = model<TBooking>('Booking', bookingSchema)
 

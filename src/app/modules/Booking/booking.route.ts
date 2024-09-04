@@ -33,7 +33,7 @@ router.get(
 // This route for checking slot availability
 router.get(
     '/check-availability', 
-    // auth("admin", "user"), 
+    auth("admin", "user"), 
     BookingControllers.checkAvailability
 );
 

@@ -61,6 +61,8 @@ const createBookingIntoDB = async (req: Request) => {
     isBooked: "confirmed",
   });
 
+  // before creating a booking I'm trying to check in database that is there any booking is already created in DB or not by this facility id and start/end time or overwriting?
+
   let isAvailable = true;
   for (const booked of bookedSlots) {
     const bookedStartTime = new Date(`1970-01-01T${booked.startTime}:00Z`);

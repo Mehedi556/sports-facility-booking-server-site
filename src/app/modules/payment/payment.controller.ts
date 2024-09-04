@@ -69,7 +69,8 @@ const confirmationController = async (req: Request, res: Response) => {
         <p><span class="highlight">Time:</span> ${result?.startTime} - ${result?.endTime}</p>
         <p><span class="highlight">Amount Paid:</span> $${result?.payableAmount}</p>
         <p><span class="highlight">Payment Status:</span>Paid</p>
-        <a href="http://localhost:5173/" class="return-home">Return Home</a>
+        <a href="https://sports-facility-booking-client-iota.vercel.app/" class="return-home">Return Home</a>
+        <a href="http://localhost:5173/" class="return-home">Return local Home</a>
       </div>
     </body>
     </html>
