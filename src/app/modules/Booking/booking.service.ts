@@ -63,12 +63,19 @@ const createBookingIntoDB = async (req: Request) => {
 
   // before creating a booking I'm trying to check in database that is there any booking is already created in DB or not by this facility id and start/end time or overwriting?
 
+
   let isAvailable = true;
   for (const booked of bookedSlots) {
     const bookedStartTime = new Date(`1970-01-01T${booked.startTime}:00Z`);
     const bookedEndTime = new Date(`1970-01-01T${booked.endTime}:00Z`);
     const slotStartTime = new Date(`1970-01-01T${startTime}:00Z`);
     const slotEndTime = new Date(`1970-01-01T${endTime}:00Z`);
+
+    //before start the logic I want to describe the full logic here. just two thing is here.
+    // 1. If the existing booked slot ends before new booking start slot, then it's not overlap.
+    // 2. If the new booking slot ends before existing booked start slot, then it's not overlap.
+
+    // Now look carefully.. If I reverse these 2 logic then it's mean slots are overlapping.. So if overlapping then I'm throwing error message that (This slot is not available. Try another slots....). simple....
 
     if (!(bookedEndTime <= slotStartTime || bookedStartTime >= slotEndTime)) {
       isAvailable = false;
