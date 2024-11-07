@@ -14,8 +14,8 @@ const confirmationController = async (req: Request, res: Response) => {
       <style>
         body {
           font-family: Arial, sans-serif;
-          background: linear-gradient(to right, #93c5fd, #4f46e5);
-          color: #fff;
+          background: #ADD3FF;
+          color: #01004A;
           margin: 0;
           padding: 0;
           display: flex;
@@ -47,8 +47,8 @@ const confirmationController = async (req: Request, res: Response) => {
           display: inline-block;
           margin-top: 20px;
           padding: 10px 20px;
-          background-color: #1d4ed8;
-          color: #fff;
+          background-color:;
+          color: #01004A;
           border: none;
           border-radius: 8px;
           text-decoration: none;
@@ -69,8 +69,7 @@ const confirmationController = async (req: Request, res: Response) => {
         <p><span class="highlight">Time:</span> ${result?.startTime} - ${result?.endTime}</p>
         <p><span class="highlight">Amount Paid:</span> $${result?.payableAmount}</p>
         <p><span class="highlight">Payment Status:</span>Paid</p>
-        <a href="https://sports-facility-booking-client-iota.vercel.app/" class="return-home">Return Home</a>
-        <a href="http://localhost:5173/" class="return-home">Return local Home</a>
+        <a href="https://sports-facility-booking-client-iota.vercel.app/user" class="return-home">Return to dashboard</a>
       </div>
     </body>
     </html>
