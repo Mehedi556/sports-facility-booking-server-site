@@ -41,14 +41,14 @@ const confirmationController = async (req: Request, res: Response) => {
         }
         .highlight {
           font-weight: bold;
-          color: #fde047;
+          color: #01004A;
         }
         .return-home {
           display: inline-block;
           margin-top: 20px;
           padding: 10px 20px;
-          background-color:;
-          color: #01004A;
+          background-color:#01004A;
+          color: white;
           border: none;
           border-radius: 8px;
           text-decoration: none;
@@ -57,7 +57,7 @@ const confirmationController = async (req: Request, res: Response) => {
           cursor: pointer;
         }
         .return-home:hover {
-          background-color: linear-gradient(to right, #93c5fd, #4f46e5);
+          background-color: #01004A;
         }
       </style>
     </head>

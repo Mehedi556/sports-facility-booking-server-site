@@ -11,7 +11,7 @@ const router = express.Router();
 router.post(
   '/',
   auth("admin"),
-  validateRequest(FacilityValidationSchema.CreateValidationSchema),
+  // validateRequest(FacilityValidationSchema.CreateValidationSchema),
   FacilityControllers.createFacility,
 );
 

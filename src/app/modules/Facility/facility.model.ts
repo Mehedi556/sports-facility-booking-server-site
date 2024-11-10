@@ -22,6 +22,32 @@ const facilitySchema = new Schema<TFacility>({
         type: String,
         required: true,
     },
+    capacity: {
+        type: Number,
+        required: true
+    },
+    rules: {
+        type: [String],
+        required: true
+    },
+    nearbyFacilities: {
+        type: [String],
+        required: true
+    },
+    contactInfo: {
+        name: {
+            type: String,
+            required: true,
+        },
+        email: {
+            type: String,
+            required: true,
+        },
+        phone: {
+            type: String,
+            required: true,
+        },
+    },
     isDeleted: {
         type: Boolean,
         default: false
